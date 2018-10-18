@@ -1,0 +1,1 @@
+spring:  jpa:    show-sql: true    hibernate:      ddl-auto: update  thymeleaf:    encoding: UTF-8    cache: false    mode: HTML5#    prefix: classpath:/templates/    suffix: .html  profiles:    active: dev
