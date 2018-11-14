@@ -1,1 +1,1 @@
-#!/usr/bin/env bashlsof -i:8089 |awk '{print $2}' | sed -n '2p' | xargs kill -9java -jar g-fast-portal*.jar --server.port=8089
+#!/usr/bin/env bashlsof -i:8089 |awk '{print $2}' | sed -n '2p' | xargs kill -9java -jar ./target/g-fast-portal*.jar --server.port=8089 > tail -f catalina.out
