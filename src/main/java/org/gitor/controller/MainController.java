@@ -1,0 +1,1 @@
+package org.gitor.controller;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;/** * main controller * @author : liuwenlong * @date : 2018/12/27 18:03 */@Controller@RequestMapping(value = "/")public class MainController {}
