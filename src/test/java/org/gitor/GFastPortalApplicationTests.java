@@ -14,9 +14,10 @@ public class GFastPortalApplicationTests {
 	@Test
 	public void contextLoads() {
 
-
         Map<String, Object> map = new HashMap<>();
         Map<String, Object> map1 = new HashMap<>();
+
+        Map<String,Object> map3 = new HashMap<>();
 
         map.put("id",1);
         map.put("name","abd");
@@ -24,28 +25,45 @@ public class GFastPortalApplicationTests {
         map1.put("id",2);
         map1.put("name","abd");
 
+        map3.put("id",4);
+        map3.put("name","aaaaa");
+
+        Map<String,Object> map4 = new HashMap<>();
+        map4.put("id",4);
+        map4.put("name","aaaaa");
+
+        Map<String,Object> map5 = new HashMap<>();
+        map5.put("id",10);
+        map5.put("name","aaaasas");
+
         List<Map<String,Object>> list = new ArrayList<>();
         list.add(map);
         list.add(map1);
+        list.add(map3);
+        list.add(map4);
+        list.add(map5);
 
+        Set<Map<String,Object>> list1 = new HashSet<>();
 
-        Map<String,Object> map2 = new HashMap<>();
+        for (int i = 0 ; i < list.size();i++){
 
+            for (int j =list.size()-1 ; j>i ;j--){
+                Map<String,Object> map2 = new HashMap<>();
 
-        for (Map<String,Object> l : list){
+                if (list.get(i).get("name").equals(list.get(j).get("name"))){
 
-            for (int i = 0;i<list.size() ;i++){
-                map2.put("name",l.get("name"));
-                if (l.get("name").equals(list.get(i).get("name"))){
                     map2.put("id",3);
+                    map2.put("name",list.get(j).get("name"));
+
+                }else {
+                    map2.put("id",list.get(j).get("id"));
+                    map2.put("name",list.get(j).get("name"));
                 }
+                list1.add(map2);
 
             }
 
         }
-
-        List<Map<String,Object>> list1 = new ArrayList<>();
-        list1.add(map2);
 
         list1.forEach(System.out::println);
 
