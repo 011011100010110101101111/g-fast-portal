@@ -65,7 +65,31 @@ public class GFastPortalApplicationTests {
 
         }
 
-        list1.forEach(System.out::println);
+
+        String a = "010100110";
+
+        String b = "100101110";
+
+        Integer aaa = Integer.valueOf(a,2);
+        Integer bbb = Integer.valueOf(b,2);
+
+
+        int ab = aaa|bbb;
+
+        System.out.println(Integer.toBinaryString(ab));
+
+//      //  list1.forEach(System.out::println);
+//
+//
+//
+//        int l = 6;
+//        int w = l << 2;
+//
+//
+//        System.out.println(w);
+//
+//
+//        System.out.println(222 | 333);
 
     }
 }
